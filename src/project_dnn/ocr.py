@@ -41,13 +41,6 @@ class LicensePlateOCR:
         
         return processed_img
 
-    def perform_ocr(self, processed_image : PIL.Image) -> str:
+    def perform_ocr(self, processed_image : Image) -> str:
 
-        text = ""
-        
-        img_np = np.array(processed_image)
-        results = self.reader.readtext(img_np, detail=0)
-        text = " ".join(results)
-
-        clean_text = ''.join(e for e in text if e.isalnum())
-        return clean_text
+        pass
